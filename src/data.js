@@ -50,6 +50,7 @@ const DATA = {
     },
     {
       name: '🩸 LeukoScan: AI-Powered Leukemia Prediction System',
+      status: 'ongoing',
       desc: 'AI-based clinical decision support framework to detect early stages of leukemia.',
       tech: ['PERN Stack', 'Python', 'ML', 'DL'],
       github: 'https://github.com/riyajagani/LeukoScan',

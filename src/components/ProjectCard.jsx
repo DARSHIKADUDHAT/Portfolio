@@ -115,10 +115,26 @@ export default function ProjectCard({ project, onClick }) {
         >
           <h3
             className="project-title"
-            style={{ fontSize: '20px', marginBottom: '12px', lineHeight: '1.3' }}
+            style={{ fontSize: '20px', marginBottom: project.status === 'ongoing' ? '6px' : '12px', lineHeight: '1.3' }}
           >
             {project.name}
           </h3>
+          {project.status === 'ongoing' && (
+            <span style={{
+              display: 'inline-block',
+              fontSize: '11px',
+              fontWeight: 600,
+              color: '#38bdf8',
+              background: 'rgba(56,189,248,0.1)',
+              border: '1px solid rgba(56,189,248,0.3)',
+              borderRadius: '999px',
+              padding: '2px 10px',
+              letterSpacing: '0.05em',
+              marginBottom: '10px',
+            }}>
+              Ongoing
+            </span>
+          )}
 
           {/* 2 bullet points shown on the card face */}
           {previewBullets.length > 0 && (

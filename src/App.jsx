@@ -148,7 +148,11 @@ export default function App() {
               {DATA.research.map((r, i) => (
                 <div key={i} className="timeline-item">
                   <div className="timeline-title" style={{ fontSize: '20px' }}>{r.title}</div>
-                  <div className="timeline-subtitle">{r.venue} | {r.date}</div>
+                  <div className="timeline-subtitle">
+                    {r.venue}{' '}
+                    <span style={{ fontSize: '12px', fontWeight: 500, color: '#38bdf8', opacity: 0.85 }}>· accepted</span>
+                    {' '}| {r.date}
+                  </div>
                   <ul className="styled-list">
                     {r.bullets.map((b, j) => (
                       <li key={j}>{b}</li>
